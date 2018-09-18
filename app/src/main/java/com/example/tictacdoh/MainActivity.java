@@ -59,13 +59,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         if (player1Turn)
         {
-            //((Button) view).setBackgroundResource(R.drawable.osx);
-            ((Button) view).setText("\uD83C\uDF11");
+            ((Button) view).setBackgroundResource(R.drawable.osx);
+            ((Button) view).setText(" ");
+            //((Button) view).setText("\uD83C\uDF11");
         }
         else
         {
-            //((Button) view).setBackgroundResource(R.drawable.windows10);
-            ((Button) view).setText("\uD83C\uDF1E");
+            ((Button) view).setBackgroundResource(R.drawable.windows10);
+            ((Button) view).setText("  ");
+            //((Button) view).setText("\uD83C\uDF1E");
         }
 
         roundCount++;
@@ -165,7 +167,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void updatePointsText ()
     {
         textViewPlayer1.setText("Player 1: " + player1Points);
-        textViewPlayer2.setText("Player 2: " + player1Points);
+        textViewPlayer2.setText("Player 2: " + player2Points);
     }
 
     private void resetBoard ()
@@ -175,7 +177,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             for (int j = 0; j < 3; j++)
             {
                 buttons[i][j].setText("");
-                //buttons[i][j].setBackgroundResource(R.drawable.defaultbutton);
+                buttons[i][j].setBackgroundResource(R.drawable.defaultbutton);
             }
         }
 
